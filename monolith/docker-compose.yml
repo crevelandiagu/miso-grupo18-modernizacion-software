@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  # -----------------------Servicio monolito -----------------------------
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: employeedb
+    networks:
+      springboot-mysql-net:
+
+  springboot-restful-webservices:
+    container_name: springboot-restful-webservices
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      DB_NAME: ecommerce
+      DB_HOST: mysqldb
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: root
+    ports:
+      - "8089:8089"
+    expose:
+      - "8089"
+    depends_on:
+      - mysqldb
+    networks:
+      springboot-mysql-net:
+    restart: on-failure
+
+networks:
+  springboot-mysql-net:
