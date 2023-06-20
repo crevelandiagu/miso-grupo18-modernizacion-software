@@ -1,19 +1,23 @@
 # Miso-grupo18-modernizacion-software
 
-En el siguiente proyecto se plantea la siguiente aplicacion base para modernizar: [Link text Here](https://github.com/GoogleCloudPlatform/monolith-to-microservices-example)
+En el siguiente proyecto se plantea la siguiente aplicacion base para modernizar: [Link AQUI](https://github.com/GoogleCloudPlatform/monolith-to-microservices-example)
  
 Pasando de una aplicacion de monolito a una aplicacion de micro servicios.
 
 ## Funcionamieto de la aplicacion
 
-La aplicacion cuenta con los siguientes endpoints 
+La aplicacion cuenta con los siguientes endpoints:
 
-- Home GET = /
+- Home  muestra todos los productos GET = /
+
 - Obtener producto GET = /product/{id}
-- guardar las configuraciones del carro POST = /cart/checkout
-- Conffigurar caracteristicas del carro POST = /cart
-- mostrar el carro como va hasta el momento POST = /showcart
-- POST = /cart/empty
 
-La aplicacion nos ayuda a crear un carro con 
-diferetes caracteristicas
+- Guardar las configuraciones del carro de compras POST = /cart/checkout
+
+- Configurar características de los productos a comprar del carro de compras POST = /cart
+
+- Mostrar el carro de compras como va hasta el momento POST = /showcart
+
+- Nos ayuda a quitar productos del carro de comprasPOST = /cart/empty
+
+La aplicación nos ayuda a crear un carro de compras con diferentes productos que vayamos escogiendo  
