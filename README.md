@@ -21,3 +21,16 @@ La aplicacion cuenta con los siguientes endpoints:
 - Nos ayuda a quitar productos del carro de comprasPOST = /cart/empty
 
 La aplicación nos ayuda a crear un carro de compras con diferentes productos que vayamos escogiendo  
+
+## Ejecutar la aplicacion con docker
+
+- ingresar a la carpeta monolith
+- ejecutar
+```shell
+docker build --tag java-docker . 
+```
+y despues
+
+```shell
+ docker run -d -p 8089:8080 java-docker
+```
